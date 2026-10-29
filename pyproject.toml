@@ -1,0 +1,18 @@
+[project]
+name = "x-alertas-mcp"
+version = "0.1.0"
+description = "MCP para buscar en X (Twitter) y levantar alertas por palabra clave, gratis (twscrape)"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=2.3,<3",
+    "twscrape[curl]>=0.20.1",
+    "uvicorn>=0.30",
+    "tzdata",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
